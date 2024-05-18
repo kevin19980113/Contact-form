@@ -26,6 +26,7 @@ export default function ContactForm() {
       data.lastname === "" ||
       /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(data.email) ===
         false ||
+      data.message === "" ||
       data.consent.length === 0 ||
       data.query.length === 0
     ) {
