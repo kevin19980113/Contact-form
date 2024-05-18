@@ -11,6 +11,7 @@ const SuccessModal = forwardRef(function SuccessModal({ props }, ref) {
       return {
         open() {
           modal.current.showModal();
+          modal.current.focus();
         },
         close() {
           modal.current.close();
@@ -21,7 +22,7 @@ const SuccessModal = forwardRef(function SuccessModal({ props }, ref) {
   );
 
   return createPortal(
-    <dialog ref={modal} className="success-modal">
+    <dialog ref={modal} className="success-modal" tabIndex={0}>
       <header className="modal-header">
         <img src={successImg} alt="success" />
         <h3>Message Sent!</h3>

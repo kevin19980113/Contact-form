@@ -134,10 +134,15 @@ body {
 
 :is(.contact-form input, .contact-form textarea, .radio-option):hover,
 :is(.contact-form input, .contact-form textarea, .radio-option):active,
-:is(.contact-form input, .contact-form textarea):focus {
+:is(.contact-form input, .contact-form textarea, .radio-option):focus {
   outline: none;
   border-color: var(--green);
   cursor: pointer;
+}
+
+.radio-option:has(:focus) {
+  background-color: var(--light-green);
+  border-color: var(--green);
 }
 
 .query-options input,
